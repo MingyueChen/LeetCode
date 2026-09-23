@@ -28,3 +28,9 @@ function containsDuplicate(nums) {
   }
   return false;
 }
+
+/**
+ * 
+ *Why use set? We only care about whether the value exists or not
+ We don't want to get the key's corresponding value (that's for map)
+ */
