@@ -1,0 +1,49 @@
+怎么做好这类题目？ matrix/simulation
+
+(1) Make sure it is a matrix question
+And usually we have:
+
+const rows = matrix.length;
+const cols = matrix[0].length;
+
+for (let row = 0; row < rows; row++) {
+  for (let col = 0; col < cols; col++) {
+    // process matrix[row][col]
+  }
+}
+
+(2) Make sure we understand directions (e.g., one cell can have 8 neighbour directions), check boundaries
+
+(3) If we need original copy of matrix: const copy = matrix.map(row => [...row]);
+(4) Update matrix based on rules using if/else statement
+
+
+
+| 题目出现              | 你应该想到                |
+| ----------------- | -------------------- |
+| 2D array / matrix | `row + col`          |
+| every cell        | 双重 loop              |
+| neighboring cells | directions           |
+| 4 directions      | 上下左右                 |
+| 8 directions      | 八个方向                 |
+| adjacent          | directions           |
+| boundary / edge   | 越界检查                 |
+| next state        | simulation           |
+| next generation   | simulation           |
+| simultaneously    | **不能直接覆盖**           |
+| rotate            | transpose / reverse  |
+| spiral            | four boundaries      |
+| set zeroes        | row / column marking |
+| search in grid    | DFS / BFS            |
+
+问自己4个问题：
+1. 我要怎么遍历？
+row / col？
+
+2. 我要不要看邻居？
+如果要 → directions + boundary
+
+3. 我是在修改原 Matrix，还是在计算新的状态？
+如果是 simulation → 想 old state / new state
+
+4. 题目的自然语言规则怎么翻译成 if/else？

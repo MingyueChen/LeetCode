@@ -1,0 +1,26 @@
+Sliding Window = A continuous section + longest/shortest/best + some condition
+Example: (1) longest substring without duplicates; (2) shortest subarray with sum ≥ target
+Basic idea: Expand the window with right. If the window becomes invalid, move left to shrink it until it becomes valid again.
+Sliding Window: The two pointers usually move in the same direction. I am maintaining a continuous range.
+Sliding Window is actually a specific type of Two Pointers technique.
+
+Two pointers: The pointers can move toward each other. I have two positions, and I decide which pointer should move.
+
+Sliding Window:
+"Continuous range → maintain a window → expand/shrink."
+
+Two Pointers:
+"Two positions → compare/check something → decide which pointer moves."
+
+| 题目特征                               | 第一反应        |
+| -----------------------------------   | -------------- |
+| substring / subarray                  | Sliding Window |
+| contiguous / consecutive              | Sliding Window |
+| longest continuous section            | Sliding Window |
+| shortest continuous section           | Sliding Window |
+| window 满足某个条件                    | Sliding Window |
+| sorted array + 找两个数                | Two Pointers   |
+| 从两边往中间                           | Two Pointers   |
+| palindrome                            | Two Pointers   |
+| remove duplicates from sorted array   | Two Pointers   |
+| merge / compare 两个序列               | Two Pointers   |
